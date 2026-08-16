@@ -186,8 +186,6 @@ These references are contextual. Scientific claims in the viewer are limited to 
 
 ## Author
 
-## Author
-
 **Rito Yamasaki**  
 School of Global Studies and Collaboration, Aoyama Gakuin University, Japan
 
