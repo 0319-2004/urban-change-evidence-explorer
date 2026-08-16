@@ -186,7 +186,17 @@ These references are contextual. Scientific claims in the viewer are limited to 
 
 ## Author
 
-Developed for the undergraduate research project maintained in [0319-2004/shimokita-building-change-detection](https://github.com/0319-2004/shimokita-building-change-detection). No personal author name is inferred from the repository username; update this section and `CITATION.cff` with the preferred scholarly attribution before publication.
+## Author
+
+**Rito Yamasaki**  
+School of Global Studies and Collaboration, Aoyama Gakuin University, Japan
+
+Research interests: Remote Sensing, SAR, GIS, GeoAI, and 3D Geoinformation.
+
+This application was developed as research software for the undergraduate project:
+[shimokita-building-change-detection](https://github.com/0319-2004/shimokita-building-change-detection).
+
+GitHub: [0319-2004](https://github.com/0319-2004)
 
 ## License
 
