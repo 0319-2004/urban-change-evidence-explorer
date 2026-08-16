@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this research viewer, cite the viewer and the underlying source research repository."
+title: "Urban Change Evidence Explorer"
+type: software
+version: 0.1.0
+date-released: 2026-08-16
+authors:
+  - family-names: "Research project contributors"
+abstract: "A static Web GIS for inspecting mesh-level evidence and uncertainty in Sentinel-1 SAR-based urban change screening in Shimokitazawa, Tokyo."
+keywords:
+  - Sentinel-1
+  - SAR
+  - urban change
+  - MapLibre
+  - Web GIS
+  - research software
+license: MIT
+notes: "Replace the contributor placeholder and add the viewer's publication repository before release. Underlying source research: https://github.com/0319-2004/shimokita-building-change-detection"

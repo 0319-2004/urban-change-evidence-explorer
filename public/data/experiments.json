@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "experiments": [
+    {
+      "id": "window-a-2019-2025-frozen",
+      "label": "Window A · frozen result",
+      "status": "Canonical frozen evaluation",
+      "description": "Two-window Sentinel-1 SAR intensity screening result retained by the source study.",
+      "observation_windows": [
+        {
+          "label": "Winter 2019",
+          "start": "2019-01-01",
+          "end_exclusive": "2019-03-31",
+          "scene_count": 8
+        },
+        {
+          "label": "Winter 2025",
+          "start": "2025-01-01",
+          "end_exclusive": "2025-03-31",
+          "scene_count": 7
+        }
+      ],
+      "sensor": "Sentinel-1A",
+      "product": "COPERNICUS/S1_GRD_FLOAT",
+      "instrument_mode": "IW",
+      "polarization": "VV",
+      "orbit_pass": "Descending",
+      "relative_orbit": 46,
+      "method": "Conradsen two-window omnibus likelihood-ratio test (single-polarization form)",
+      "implemented_nominal_alpha": 0.01,
+      "implemented_enl": 4.4,
+      "mesh_aggregation": "Mean of the binary pixel-level change mask at 10 m scale",
+      "mesh_detection_rule": "source_density > 0",
+      "analysis_unit": "50 m EPSG:3857 grid cell (approximately 40.6 m on the ground)",
+      "implementation_note": "The research record documents that the frozen implementation used an incorrect look-number parameter. The frozen result is displayed unchanged; corrected-look analyses are sensitivity checks, not replacements.",
+      "source_files": [
+        "02_canonical_data/shimokita_density_2025.geojson",
+        "03_verification_scripts/Gee_step5_export.js",
+        "03_verification_scripts/verify_matched_alert_count.py"
+      ]
+    }
+  ]
+}

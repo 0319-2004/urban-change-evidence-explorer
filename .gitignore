@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+.playwright-cli/
+output/
+*.log
+__pycache__/
+*.py[cod]

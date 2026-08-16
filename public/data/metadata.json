@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "window-a-frozen@ef7039a71709",
+  "generated_at": "2026-08-16T03:15:00+00:00",
+  "generator": "scripts/build_app_dataset.py",
+  "source": {
+    "repository": "https://github.com/0319-2004/shimokita-building-change-detection",
+    "commit": "ef7039a717092e8918b042b23c81b44a8e45f93f",
+    "license_notice": "No standard license file was present in the audited source repository. Confirm source-data redistribution with the repository owner.",
+    "files": [
+      {
+        "path": "02_canonical_data/shimokita_density_2025.geojson",
+        "sha256": "03aec3253994f6628a53741a026aa0fce4ae4dd9c1f85f8aa7a8aa865c98734f"
+      },
+      {
+        "path": "02_canonical_data/graduate_thesis_judge_A.csv",
+        "sha256": "9fa97d9a5b4aa739594a9f3a3bdab26f18ee083d04eba17620ab4bbef80ab597"
+      },
+      {
+        "path": "02_canonical_data/graduate_thesis_judge_B.csv",
+        "sha256": "80f15d3e69b1a9749ee6bdabc067be64f1dd39d221a8721acd79263ae5f66d0e"
+      },
+      {
+        "path": "02_canonical_data/strict24_members.csv",
+        "sha256": "2a4f8f64995cc5c44b218c9f9d13fec3869054ad77ab890d55e517d20900c474"
+      },
+      {
+        "path": "03_verification_scripts/Gee_step5_export.js",
+        "sha256": "583d77c335bcd1479738d06c628116317eed1aca63ab8c7c6b7fadd40b05169b"
+      },
+      {
+        "path": "03_verification_scripts/verify_matched_alert_count.py",
+        "sha256": "6af1cfbea199eab20258de405faafbe5cd1e9208f277c0dc6e7a42885e7c66fd"
+      }
+    ]
+  },
+  "transformation": {
+    "summary": "Validated frozen source values, joined agreed interpreter ground truth and STRICT24 types, derived evaluation classes, and transformed EPSG:3857 polygons to EPSG:4326.",
+    "steps": [
+      "Validate required source files, schemas, unique mesh IDs, value domains, and frozen counts.",
+      "Reconstruct ground truth only for ○/○ and ×/× interpreter agreement.",
+      "Define mesh detection exactly as source density > 0.",
+      "Map agreed ground truth and detection to TP, FP, FN, or TN; otherwise mark Not evaluated.",
+      "Join frozen change types only from strict24_members.csv.",
+      "Calculate a positive-density competition rank as a documented derived visualization.",
+      "Transform polygon coordinates from EPSG:3857 to EPSG:4326 without changing mesh topology."
+    ],
+    "derived_fields": [
+      "evaluation_class",
+      "ground_truth",
+      "detected",
+      "review_status",
+      "change_type",
+      "density_rank"
+    ]
+  },
+  "counts": {
+    "meshes": 676,
+    "reviewed_candidates": 79,
+    "evaluated_meshes": 55,
+    "ground_truth_change": 37,
+    "ground_truth_no_change": 18,
+    "review_disagreement": 24,
+    "not_reviewed": 597,
+    "detected_meshes": 29,
+    "strict_change_types": 24,
+    "evaluation_classes": {
+      "TP": 16,
+      "FP": 5,
+      "FN": 21,
+      "TN": 13,
+      "NOT_EVALUATED": 621
+    }
+  },
+  "spatial": {
+    "source_crs": "EPSG:3857",
+    "output_crs": "EPSG:4326",
+    "bbox": [
+      139.66017891,
+      35.65607184,
+      139.67185701,
+      35.66556009
+    ],
+    "grid_definition": "50 m in EPSG:3857",
+    "approximate_ground_dimension_m": 40.6
+  },
+  "missing_value_policy": "Unsupported or unavailable fields are JSON null. Missing values are never converted to zero."
+}

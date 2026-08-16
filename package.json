@@ -1,0 +1,35 @@
+{
+  "name": "urban-change-evidence-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A static research viewer for Sentinel-1 SAR urban change-screening evidence.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:data": "python3 scripts/build_app_dataset.py",
+    "test": "vitest run && python3 -m unittest discover -s tests/python -p 'test_*.py'",
+    "test:watch": "vitest",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "@vitest/coverage-v8": "^4.1.10",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
+  }
+}
